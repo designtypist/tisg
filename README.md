@@ -8,13 +8,15 @@
   Gatsby Boilerplate
 </h1>
 
-My personal Gatsby boilerplate.
+A Gatsby boilerplate to quickly get up and developing quickly with Gatsby
 
 > What's included on top of [Gatsby's Start Default](https://github.com/gatsbyjs/gatsby-starter-default)
 
 - SASS Support
 - Styled Components
 - Sitemap generation
+- Webfont Loader
+- ESLint
 
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
 
@@ -53,8 +55,10 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     .
     ├── node_modules
     ├── src
+    ├── .editorconfig //TODO: Add a description
+    ├── .eslintrc //TODO: Add a description
     ├── .gitignore
-    ├── .prettierrc
+    ├── .prettierrc //TODO: Add a description
     ├── gatsby-browser.js
     ├── gatsby-config.js
     ├── gatsby-node.js

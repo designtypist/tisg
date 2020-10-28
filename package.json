@@ -1,7 +1,7 @@
 {
   "name": "gatsby-boilerplate",
+  "description": "A Gatsby boilerplate to quickly get up and developing quickly with Gatsby",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
   "author": "James Chung <jameschung@designtypist.com>",
   "dependencies": {
@@ -15,6 +15,7 @@
     "gatsby-plugin-sharp": "^2.6.43",
     "gatsby-plugin-sitemap": "^2.4.17",
     "gatsby-plugin-styled-components": "^3.3.14",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.3.35",
     "gatsby-transformer-sharp": "^2.5.19",
     "node-sass": "^4.14.1",
