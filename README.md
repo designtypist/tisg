@@ -9,6 +9,10 @@
 </h1>
 
 My personal Gatsby boilerplate.
+> What's included on top of [Gatsby's Start Default](https://github.com/gatsbyjs/gatsby-starter-default)
+- SASS Support
+- Styled Components
+- Sitemap generation
 
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
 

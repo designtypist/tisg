@@ -1,0 +1,13 @@
+html {
+  div.sass-activated {
+    background-color: rebeccapurple;    
+    padding: 4em;
+
+    h1, p {
+      color: white;
+    }
+    a {
+      color: lightgray;
+    }
+  }
+}
