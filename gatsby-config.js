@@ -31,6 +31,6 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-sitemap`
+    `gatsby-plugin-sitemap`,
   ],
-}
+};
