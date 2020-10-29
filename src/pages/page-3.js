@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "gatsby";
+import styled from "styled-components";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import styled from "styled-components";
+import PageLinks from "../components/page_links";
 
 const Container = styled.div`
   margin: 3rem auto;
@@ -14,18 +14,16 @@ const Container = styled.div`
   justify-content: center;
 `;
 
-const SecondPage = () => (
+const ThirdPage = () => (
   <Layout>
     <Container>
       <SEO title="Page Three" />
       <h1>Hi from the third page</h1>
       <p>Welcome to page 3</p>
       <p>I'm a styled component :D</p>
-      <Link to="/page-2">Go back to page 2</Link>
-      <br />
-      <Link to="/">Go back to the homepage</Link>
+      <PageLinks />
     </Container>
   </Layout>
 );
 
-export default SecondPage;
+export default ThirdPage;

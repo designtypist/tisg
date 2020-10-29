@@ -4,6 +4,7 @@ import { PageProps, Link, graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import PageLinks from "../components/page_links";
 
 type DataProps = {
   site: {
@@ -35,7 +36,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => (
       </a>
       .
     </p>
-    <Link to="/">Go back to the homepage</Link>
+    <PageLinks />
   </Layout>
 );
 
