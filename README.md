@@ -16,17 +16,18 @@ A Gatsby boilerplate to quickly get up and developing quickly with Gatsby
 - Styled Components
 - Sitemap generation
 - Webfont Loader
-- ESLint
-
-TODO:
 - TailwindCSS
 - Font Awesome
+- Typography styles
+
+TODO:
+- ESLint
 - CMS Integration
   - Option 1: TinaCMS
   - Option 2: GetCockPitCMS ???
 - UI Components
-- Test Framework
 - Animation Library
+- Test Framework
 - Dark/Light mode feature
 
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
