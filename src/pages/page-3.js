@@ -20,7 +20,7 @@ const ThirdPage = () => (
       <SEO title="Page Three" />
       <h1>Hi from the third page</h1>
       <p>Welcome to page 3</p>
-      <p>I'm a styled component :D</p>
+      <p>I&apos;m a styled component :D</p>
       <PageLinks />
     </Container>
   </Layout>
