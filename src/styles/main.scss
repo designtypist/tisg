@@ -1,3 +1,7 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 html {
   div.sass-activated {
     background-color: rebeccapurple;    
@@ -7,7 +11,11 @@ html {
       color: white;
     }
     a {
-      color: lightgray;
+      color: lightblue;
     }
+  }
+
+  a {
+    color: blue
   }
 }
