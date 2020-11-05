@@ -1,6 +1,6 @@
 {
   "name": "gatsby-boilerplate",
-  "description": "A Gatsby boilerplate to quickly get up and developing quickly with Gatsby",
+  "description": "A Gatsby boilerplate to develop static sites quickly",
   "private": true,
   "version": "0.1.0",
   "author": "James Chung <jameschung@designtypist.com>",

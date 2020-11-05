@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Gatsby Boilerplate`,
-    description: `My personal Gatsby boilerplate.`,
     author: `@designtypist`,
-    siteUrl: `https://www.example.com`,
+    siteUrl: `https://github.com/designtypist/gatsby-boilerplate`,
+    description: `A Gatsby boilerplate to develop static sites quickly.`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
