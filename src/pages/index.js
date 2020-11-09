@@ -44,9 +44,38 @@ const IndexPage = () => (
       <div id="media">
         Gallery
       </div>
-      <div id="contact">
-        <h2>Join the Team</h2>
-        <p>Hit us up and we will let you know how you can be a part of the team!</p>
+      <div id="contact" className="flex flex-wrap bg-black text-white py-12">
+        <div className="w-full text-center">
+          <h2 className="font-bold mb-6">Join the Team</h2>
+          <p className="my-6 px-12">Hit us up we will let you know how you can be a part of the team!</p>
+        </div>
+        <div className="md:w-1/2 w-4/5 md:h-screen mx-auto">
+          <img className="md:h-full float-right clear-both" src="icebreaker-01.jpg" alt="teamup" />
+        </div>
+        <div className="md:w-1/2 w-full">
+          <div className="uppercase px-12">
+            <h3>Connect with Us</h3>
+            <form>
+              <label className="block my-4" htmlFor="name">
+                <h5 className="my-2">Name</h5>
+                <input className="w-full p-1 text-sm" id="name" name="name" type="text" placeholder="John Doe" />
+              </label>
+              <label className="block my-4" htmlFor="subject">
+                <h5 className="my-2">Subject</h5>
+                <input className="w-full p-1 text-sm" id="subject" name="subject" type="text" placeholder="TISG Fan" />
+              </label>
+              <label className="block my-4" htmlFor="email">
+                <h5 className="my-2">Email</h5>
+                <input className="w-full p-1 text-sm" id="email" name="email" type="email" placeholder="johndoe@example.com" />
+              </label>
+              <label className="block my-4" htmlFor="message">
+                <h5 className="my-2">Message</h5>
+                <textarea className="w-full p-1 text-sm" id="message" name="message" rows="4" cols="45" placeholder="Place your message here"></textarea>
+              </label>
+              <input type="submit" name="Submit" className="bg-white text-black p-2 cursor-pointer" />
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </Layout>
