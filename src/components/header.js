@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Header = () => (
@@ -7,7 +8,9 @@ const Header = () => (
       <img src="tisg-logo.png" alt="tisg-logo" width="50" height="50" className="" />
     </div>
     <div className="w-1/2 text-right p-6">
-      <FontAwesomeIcon icon={['fa', 'bars']} size="2x" className="cursor-pointer" />
+      <Link to="/nav/" state={{ modal: true, noScroll: true }}>
+        <FontAwesomeIcon icon={['fa', 'bars']} size="2x" className="cursor-pointer" />
+      </Link>
     </div>
   </header>
 );
