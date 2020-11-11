@@ -1,12 +1,12 @@
 language: node_js
 node_js:
-  - "lts/*"
+  - "stable"
 cache:
   directories:
   - node_modules
 before_script:
   - "npm i -g gatsby-cli"
-  - "yarn"
+  - "npm i"
 script:
   - "npm run test"
   - "gatsby build"
