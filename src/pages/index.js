@@ -1,10 +1,14 @@
 import React from "react";
+import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import Gallery from '../components/gallery';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <div>
@@ -42,7 +46,28 @@ const IndexPage = () => (
         </div>
       </div>
       <div id="media">
-        Gallery
+        <div>
+          <div className="flex flex-col">
+            <div className="w-1/3">
+              <h2 className="text-5xl font-bold bg-black text-white">Photos</h2>
+              <h4 className="text-3xl mt-6">2020</h4>
+            </div>
+            <div className="w-2/3">
+              <Gallery title='Videos' items={data.photosGalleryJson.gallery} />
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className="flex flex-col">
+            <div className="w-1/3">
+              <h2 className="text-5xl font-bold bg-black text-white">Videos</h2>
+              <h4 className="text-3xl mt-6">2020</h4>
+            </div>
+            <div className="w-2/3">
+              <Gallery title='Videos' items={data.videosGalleryJson.gallery} />
+            </div>
+          </div>
+        </div>
       </div>
       <div id="contact" className="flex flex-wrap bg-black text-white py-12">
         <div className="w-full text-center">
@@ -81,4 +106,43 @@ const IndexPage = () => (
   </Layout>
 );
 
+IndexPage.propTypes = {
+  data: PropTypes.object.isRequired,
+};
+
 export default IndexPage;
+
+export const query = graphql`
+  query HomepageQuery {
+    photosGalleryJson {
+      title
+      year
+      gallery {
+        description
+        title
+        image {
+          childImageSharp {
+            fluid(quality: 90, maxHeight: 500) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    }
+    videosGalleryJson {
+      title
+      year
+      gallery {
+        description
+        title
+        image {
+          childImageSharp {
+            fluid(quality: 90, maxHeight: 500) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    }
+  }
+`;
