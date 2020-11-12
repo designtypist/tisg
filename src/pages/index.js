@@ -4,9 +4,8 @@ import PropTypes from 'prop-types';
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import SocialMedia from '../components/social-media';
 import Gallery from '../components/gallery';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -15,23 +14,7 @@ const IndexPage = ({ data }) => (
       <div id="home">
         <h1>Toronto Ice Skate Group</h1>
         <h2>Check Us Out</h2>
-        <ul>
-          <li>
-            <a href="#" target="_blank">
-              <FontAwesomeIcon icon={['fab', 'youtube']} size="2x"  />
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <FontAwesomeIcon icon={['fab', 'instagram']} size="2x" />
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <FontAwesomeIcon icon={['fab', 'facebook']} size="2x" />
-            </a>
-          </li>
-        </ul>
+        <SocialMedia />
         <img src="icebreaker-03.jpg" alt="Ice Breaking" />
       </div>
       <div id="about">
