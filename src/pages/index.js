@@ -27,18 +27,29 @@ const IndexPage = ({ data }) => (
       </div>
       <div id="about">
         <div className="flex flex-wrap">
-          <img className="flex-initial lg:w-1/2 w-full h-screen" src="icebreaker-02.jpg" alt="Ice Breaking" />
           <div className="flex-initial lg:w-1/2 w-full">
-            <h2>Origin Story</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et erat ante. Praesent ut ex quis quam ornare condimentum. Proin ipsum sem, pretium efficitur sapien et, dapibus posuere lectus. Aliquam ut erat fermentum, sagittis erat ac, aliquam sapien. Suspendisse vestibulum sit amet magna a rhoncus. Fusce rhoncus, nisl sed dignissim porttitor, risus lacus mollis arcu, sed rutrum quam velit eu ante. Vivamus rhoncus ornare massa, at egestas nibh auctor ut. Maecenas non aliquet erat, ac dignissim lectus.</p>
+            <img className="h-screen float-right" src="icebreaker-02.jpg" alt="Ice Breaking" />
+          </div>
+          <div className="flex-initial lg:w-1/2 w-full">
+            <div className="bg-background-primary mt-12">
+              <h2 className="py-4 mx-6">Origin Story</h2>
+            </div>
+            <p className="m-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et erat ante. Praesent ut ex quis quam ornare condimentum. Proin ipsum sem, pretium efficitur sapien et, dapibus posuere lectus. Aliquam ut erat fermentum, sagittis erat ac, aliquam sapien. Suspendisse vestibulum sit amet magna a rhoncus. Fusce rhoncus, nisl sed dignissim porttitor, risus lacus mollis arcu, sed rutrum quam velit eu ante. Vivamus rhoncus ornare massa, at egestas nibh auctor ut. Maecenas non aliquet erat, ac dignissim lectus.</p>
           </div>
         </div>
+        <div className="py-12"></div>
         <div className="flex flex-wrap">
-          <div className="flex-initial lg:w-1/2 w-full">
-            <h2>What is Ice Breaking?</h2>
-            <p>Cras commodo mi bibendum, finibus metus at, sollicitudin sem. Fusce ligula justo, laoreet non faucibus elementum, porttitor in lectus. Aenean molestie ac nisi vitae rutrum. Curabitur sit amet consectetur leo. Proin fermentum vitae augue sit amet fermentum. Duis arcu lectus, sagittis sodales quam vel, egestas semper lorem. Proin eget sem consectetur, semper justo a, accumsan arcu. Integer posuere fringilla pretium. Nam id ornare nulla. Praesent eu consequat tellus. Nulla commodo nec eros ut interdum.</p>
+          <div className="flex-initial lg:w-2/5 w-full">
+            <div className="bg-background-primary mt-12">
+              <h2 className="py-4 mx-6">What is Ice Breaking?</h2>
+            </div>
+            <p className="m-6">Cras commodo mi bibendum, finibus metus at, sollicitudin sem. Fusce ligula justo, laoreet non faucibus elementum, porttitor in lectus. Aenean molestie ac nisi vitae rutrum. Curabitur sit amet consectetur leo. Proin fermentum vitae augue sit amet fermentum. Duis arcu lectus, sagittis sodales quam vel, egestas semper lorem. Proin eget sem consectetur, semper justo a, accumsan arcu. Integer posuere fringilla pretium. Nam id ornare nulla. Praesent eu consequat tellus. Nulla commodo nec eros ut interdum.</p>
           </div>
-          <img className="flex-initial lg:w-1/2 w-full h-screen" src="icebreaker-02.jpg" alt="Ice Breaking" />
+          <div className="flex-initial lg:w-3/5 w-full">
+            <div className="iframe-container">
+              <iframe src="https://www.youtube.com/embed/R5hUMhUFwJU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
         </div>
       </div>
       <div id="media">
