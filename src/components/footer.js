@@ -3,7 +3,7 @@ import React from "react";
 import SocialMedia from './social-media';
 
 const Footer = () => (
-  <footer className="flex flex-wrap">
+  <footer className="flex flex-wrap m-12">
     <div className="w-1/3 text-left">
       <SocialMedia />
     </div>

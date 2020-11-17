@@ -2,9 +2,6 @@ module.exports = {
   purge: false,
   target: "relaxed",
   theme: {
-    container: {
-      padding: '2rem'
-    },
     colors: {
       background: {
         primary: 'var(--bg-background-primary)',
