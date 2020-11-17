@@ -11,13 +11,19 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <div>
-      <div id="home" className="flex flex-wrap">
-        <div className="flex-initial lg:w-1/2 w-full">
-          <h1>Toronto Ice Skate Group</h1>
-          <h2>Check Us Out</h2>
-          <SocialMedia />
+      <div id="home" className="h-screen">
+        <div className="flex flex-wrap">
+          <div className="flex-initial lg:w-1/2 w-full">
+            <h1 className="pl-6 font-title">Toronto Ice Skate Group</h1>
+            <div className="bg-background-primary w-2/3">
+              <h2 className="pl-6 py-4">Check Us Out</h2>
+            </div>
+            <div className="m-6">
+              <SocialMedia />
+            </div>
+          </div>
+          <img className="flex-initial lg:w-1/2 w-full" src="icebreaker-03.jpg" alt="Ice Breaking" />
         </div>
-        <img className="flex-initial lg:w-1/2 w-full" src="icebreaker-03.jpg" alt="Ice Breaking" />
       </div>
       <div id="about">
         <div className="flex flex-wrap">
@@ -61,7 +67,7 @@ const IndexPage = ({ data }) => (
       </div>
       <div id="contact" className="bg-background-primary py-12">
         <div className="w-full text-center">
-          <h2>Join the Team</h2>
+          <h2 className="my-2">Join the Team</h2>
           <p className="text-lg text-copy-secondary">Hit us up we will let you know how you can be a part of the team!</p>
         </div>
         <div className="flex my-6 text-white">

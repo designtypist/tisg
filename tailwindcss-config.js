@@ -21,6 +21,7 @@ module.exports = {
       },
     },
     fontFamily: {
+      title: ['calgary-script-ot', 'sans-serif'],
       sans: ['futura-pt', 'sans-serif'],
       serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       mono: ['monospace']
