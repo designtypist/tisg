@@ -59,36 +59,38 @@ const IndexPage = ({ data }) => (
           </div>
         </div>
       </div>
-      <div id="contact" className="flex flex-wrap bg-black text-white py-12">
+      <div id="contact" className="bg-background-primary py-12">
         <div className="w-full text-center">
-          <h2 className="font-bold mb-6">Join the Team</h2>
-          <p className="my-6 px-12">Hit us up we will let you know how you can be a part of the team!</p>
+          <h2>Join the Team</h2>
+          <p className="text-lg text-copy-secondary">Hit us up we will let you know how you can be a part of the team!</p>
         </div>
-        <div className="md:w-1/2 w-4/5 md:h-screen mx-auto">
-          <img className="md:h-full float-right clear-both" src="icebreaker-01.jpg" alt="teamup" />
-        </div>
-        <div className="md:w-1/2 w-full">
-          <div className="uppercase px-12">
-            <h3>Connect with Us</h3>
-            <form>
-              <label className="block my-4" htmlFor="name">
-                <h5 className="my-2">Name</h5>
-                <input className="w-full p-1 text-sm" id="name" name="name" type="text" placeholder="John Doe" />
-              </label>
-              <label className="block my-4" htmlFor="subject">
-                <h5 className="my-2">Subject</h5>
-                <input className="w-full p-1 text-sm" id="subject" name="subject" type="text" placeholder="TISG Fan" />
-              </label>
-              <label className="block my-4" htmlFor="email">
-                <h5 className="my-2">Email</h5>
-                <input className="w-full p-1 text-sm" id="email" name="email" type="email" placeholder="johndoe@example.com" />
-              </label>
-              <label className="block my-4" htmlFor="message">
-                <h5 className="my-2">Message</h5>
-                <textarea className="w-full p-1 text-sm" id="message" name="message" rows="4" cols="45" placeholder="Place your message here"></textarea>
-              </label>
-              <input type="submit" name="Submit" className="bg-white text-black p-2 cursor-pointer" />
-            </form>
+        <div className="flex my-6 text-white">
+          <div className="w-3/5 h-screen mx-auto">
+            <img className="float-right clear-both" src="tisg_group_collab.jpg" alt="teamup" />
+          </div>
+          <div className="w-2/5">
+            <div className="uppercase px-12">
+              <h3 className="text-xl">Connect with Us</h3>
+              <form>
+                <label className="block my-4" htmlFor="name">
+                  <h5 className="my-2">Name</h5>
+                  <input className="w-full text-sm p-2" id="name" name="name" type="text" placeholder="John Doe" />
+                </label>
+                <label className="block my-4" htmlFor="subject">
+                  <h5 className="my-2">Subject</h5>
+                  <input className="w-full text-sm p-2" id="subject" name="subject" type="text" placeholder="TISG Fan" />
+                </label>
+                <label className="block my-4" htmlFor="email">
+                  <h5 className="my-2">Email</h5>
+                  <input className="w-full text-sm p-2" id="email" name="email" type="email" placeholder="johndoe@example.com" />
+                </label>
+                <label className="block my-4" htmlFor="message">
+                  <h5 className="my-2">Message</h5>
+                  <textarea className="w-full text-sm p-2" id="message" name="message" rows="4" cols="45" placeholder="Place your message here"></textarea>
+                </label>
+                <input type="submit" name="Submit" className="bg-white text-black p-2 cursor-pointer" />
+              </form>
+            </div>
           </div>
         </div>
       </div>

@@ -3,16 +3,22 @@ module.exports = {
   target: "relaxed",
   theme: {
     colors: {
+      transparent: 'transparent',
+      black: '#000',
+      white: '#fff',
       background: {
         primary: 'var(--bg-background-primary)',
         secondary: 'var(--bg-background-secondary)',
 
         form: 'var(--bg-background-form)',
       },
+      'border-color': {
+        primary: 'var(--border-border-color-primary)',
+      },
       copy: {
         primary: 'var(--text-copy-primary)',
         secondary: 'var(--text-copy-hover)',
-      }
+      },
     },
     fontFamily: {
       sans: ['futura-pt', 'sans-serif'],
