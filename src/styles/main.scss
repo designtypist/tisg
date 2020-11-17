@@ -1,17 +1,12 @@
-html {
-  div.sass-activated {
-    background-color: rebeccapurple;    
-    padding: 4em;
+:root {
+  //colour palette
+  --bg-background-primary: #172940;
+  --bg-background-secondary: #dceef2;
 
-    h1, li, p {
-      color: white;
-    }
-    a {
-      color: lightblue;
-    }
-  }
+  --bg-background-form: #ffffff;
 
-  a {
-    color: blue
-  }
+  --text-copy-primary: #A7D5F2;
+  --text-copy-secondary: #5095bf;
+
+  --text-copy-hover: #5095bf;
 }
