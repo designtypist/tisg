@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Item from './item';
+import GalleryItem from './gallery-item';
 
-const Gallery = ({ items }) => (
+const Gallery = ({ items, reverse }) => (
   <div>
     {items.map((item, i) => (
-      <Item {...item} key={i} />
+      <GalleryItem {...item} key={i} reverse={reverse} />
     ))}
   </div>
 );
 
 Gallery.propTypes = {
   items: PropTypes.arrayOf(PropTypes.object).isRequired,
+  reverse: PropTypes.string.isRequired
 };
 
 export default Gallery;

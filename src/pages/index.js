@@ -47,35 +47,52 @@ const IndexPage = ({ data }) => (
           </div>
           <div className="flex-initial lg:w-3/5 w-full">
             <div className="iframe-container">
-              <iframe src="https://www.youtube.com/embed/R5hUMhUFwJU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/R5hUMhUFwJU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
           </div>
         </div>
       </div>
+      <div className="py-12"></div>
       <div id="media">
         <div>
           <div className="flex flex-col">
-            <div>
-              <h2>Photos</h2>
-              <h4>2020</h4>
+            <div className="flex flex-wrap">
+              <div className="w-2/3"></div>
+              <div className="w-1/3 bg-background-primary py-4">
+                <h2 className="pl-12 text-left">Photos</h2>
+              </div>
             </div>
-            <div>
-              <Gallery title='Videos' items={data.photosGalleryJson.gallery} />
+            <div className="flex items-center text-copy-primary my-4">
+              <div className="flex-initial w-4/6 inline-block border-2"></div>
+              <h4 className="flex-initial w-1/6 inline-block text-center">2020</h4>
+              <div className="flex-initial w-1/6 inline-block border-2"></div>
+            </div>
+            <div className="w-5/6 mx-auto">
+              <Gallery title='Videos' items={data.photosGalleryJson.gallery} reverse={''} />
             </div>
           </div>
         </div>
+        <div className="py-12"></div>
         <div>
           <div className="flex flex-col">
-            <div>
-              <h2>Videos</h2>
-              <h4>2020</h4>
+            <div className="flex flex-wrap">
+              <div className="w-1/3 bg-background-primary py-4">
+                <h2 className="pr-12 text-right">Videos</h2>
+              </div>
+              <div className="w-2/3"></div>
             </div>
-            <div>
-              <Gallery title='Videos' items={data.videosGalleryJson.gallery} />
+            <div className="flex items-center text-copy-primary my-4">
+              <div className="flex-initial w-1/6 inline-block border-2"></div>
+              <h4 className="flex-initial w-1/6 inline-block text-center">2020</h4>
+              <div className="flex-initial w-4/6 inline-block border-2"></div>
+            </div>
+            <div className="w-5/6 mx-auto">
+              <Gallery title='Videos' items={data.videosGalleryJson.gallery} reverse={'reverse'} />
             </div>
           </div>
         </div>
       </div>
+      <div className="py-12"></div>
       <div id="contact" className="bg-background-primary py-12">
         <div className="w-full text-center">
           <h2 className="my-2">Join the Team</h2>
