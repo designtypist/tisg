@@ -3,10 +3,10 @@ import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Header = () => (
-  <header className="flex flex-wrap m-12">
+  <header className="flex flex-wrap md:m-12 m-6">
     <div className="w-1/2 text-left">
       <Link to="/">
-        <img src="tisg-logo.png" alt="tisg-logo" width="50" height="50" className="" />
+        <img src="tisg-logo.png" alt="TISG logo" width="50" height="50" />
       </Link>
     </div>
     <div className="w-1/2 text-right">

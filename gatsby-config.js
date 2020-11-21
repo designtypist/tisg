@@ -19,13 +19,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Toronto Ice Skate Group`,
+        short_name: `TISG`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        background_color: `#fff`,
+        theme_color: `#fff`,
+        icon: `src/images/icons/tisg-logo.png`,
       },
     },
     `gatsby-plugin-offline`,

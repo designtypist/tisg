@@ -8,7 +8,7 @@ import SocialMedia from '../components/social-media';
 const Nav = () => (
     <ModalRoutingContext.Consumer>
     {({ modal, closeTo }) => (
-      <div>
+      <nav>
           {modal ? (
             <header className="text-right">
               <Link to={closeTo}>
@@ -40,7 +40,7 @@ const Nav = () => (
             <SocialMedia />
           </li>
         </ul>
-      </div>
+      </nav>
     )}
   </ModalRoutingContext.Consumer>
 );
