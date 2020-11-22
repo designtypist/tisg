@@ -1,7 +1,9 @@
 import React from "react";
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ModalRoutingContext } from 'gatsby-plugin-modal-routing'
+import { ModalRoutingContext } from 'gatsby-plugin-modal-routing';
+
+import SocialMedia from '../components/social-media';
 
 const Nav = () => (
     <ModalRoutingContext.Consumer>
@@ -33,6 +35,9 @@ const Nav = () => (
           </li>
           <li>
             <Link to="/#contact">Contact</Link>
+          </li>
+          <li>
+            <SocialMedia />
           </li>
         </ul>
       </div>

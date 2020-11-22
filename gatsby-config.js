@@ -45,17 +45,11 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
-    {
       resolve: "gatsby-plugin-postcss",
       options: {
         postCssPlugins: [
           require("tailwindcss"),
-          require("./tailwind.config.js"), // Optional: Load custom Tailwind CSS configuration
+          require("./tailwindcss-config.js"), // Optional: Load custom Tailwind CSS configuration
           require("autoprefixer")
         ],
       },

@@ -23,7 +23,6 @@
     "gatsby-plugin-sharp": "^2.6.43",
     "gatsby-plugin-sitemap": "^2.4.17",
     "gatsby-plugin-styled-components": "^3.3.14",
-    "gatsby-plugin-typography": "^2.5.13",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.3.35",
     "gatsby-transformer-json": "^2.4.15",
@@ -35,10 +34,8 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
-    "react-typography": "^0.16.19",
     "styled-components": "^5.2.0",
-    "tailwindcss": "^1.9.6",
-    "typography": "^0.16.19"
+    "tailwindcss": "^1.9.6"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

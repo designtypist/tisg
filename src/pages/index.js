@@ -4,98 +4,122 @@ import PropTypes from 'prop-types';
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import SocialMedia from '../components/social-media';
 import Gallery from '../components/gallery';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <div>
-      <div id="home">
-        <h1>Toronto Ice Skate Group</h1>
-        <h2>Check Us Out</h2>
-        <ul>
-          <li>
-            <a href="#" target="_blank">
-              <FontAwesomeIcon icon={['fab', 'youtube']} size="2x"  />
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <FontAwesomeIcon icon={['fab', 'instagram']} size="2x" />
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <FontAwesomeIcon icon={['fab', 'facebook']} size="2x" />
-            </a>
-          </li>
-        </ul>
-        <img src="icebreaker-03.jpg" alt="Ice Breaking" />
-      </div>
-      <div id="about">
-        <div>
-          <h2>Origin Story</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et erat ante. Praesent ut ex quis quam ornare condimentum. Proin ipsum sem, pretium efficitur sapien et, dapibus posuere lectus. Aliquam ut erat fermentum, sagittis erat ac, aliquam sapien. Suspendisse vestibulum sit amet magna a rhoncus. Fusce rhoncus, nisl sed dignissim porttitor, risus lacus mollis arcu, sed rutrum quam velit eu ante. Vivamus rhoncus ornare massa, at egestas nibh auctor ut. Maecenas non aliquet erat, ac dignissim lectus.</p>
-          <img src="icebreaker-02.jpg" alt="Ice Breaking" />
-        </div>
-        <div>
-          <h2>What is Ice Breaking?</h2>
-          <p>Cras commodo mi bibendum, finibus metus at, sollicitudin sem. Fusce ligula justo, laoreet non faucibus elementum, porttitor in lectus. Aenean molestie ac nisi vitae rutrum. Curabitur sit amet consectetur leo. Proin fermentum vitae augue sit amet fermentum. Duis arcu lectus, sagittis sodales quam vel, egestas semper lorem. Proin eget sem consectetur, semper justo a, accumsan arcu. Integer posuere fringilla pretium. Nam id ornare nulla. Praesent eu consequat tellus. Nulla commodo nec eros ut interdum.</p>
-        </div>
-      </div>
-      <div id="media">
-        <div>
-          <div className="flex flex-col">
-            <div className="w-1/3">
-              <h2 className="text-5xl font-bold bg-black text-white">Photos</h2>
-              <h4 className="text-3xl mt-6">2020</h4>
-            </div>
-            <div className="w-2/3">
-              <Gallery title='Videos' items={data.photosGalleryJson.gallery} />
-            </div>
+    <div id="home" className="lg:h-screen">
+      <div className="flex flex-wrap">
+        <div className="flex-initial lg:w-1/2 w-full">
+          <h1 className="pl-6 font-title">Toronto Ice Skate Group</h1>
+          <div className="bg-background-primary w-2/3">
+            <h2 className="pl-6 py-4">Check Us Out</h2>
+          </div>
+          <div className="m-6">
+            <SocialMedia />
           </div>
         </div>
-        <div>
-          <div className="flex flex-col">
-            <div className="w-1/3">
-              <h2 className="text-5xl font-bold bg-black text-white">Videos</h2>
-              <h4 className="text-3xl mt-6">2020</h4>
-            </div>
-            <div className="w-2/3">
-              <Gallery title='Videos' items={data.videosGalleryJson.gallery} />
-            </div>
+        <div className="flex-initial lg:w-1/2 w-full">
+          <img src="icebreaker-03.jpg" alt="Ice Breaking" />
+        </div>
+      </div>
+    </div>
+    <div id="about">
+      <div className="flex flex-wrap lg:flex-row flex-col-reverse">
+        <div className="flex-initial lg:w-1/2 w-full">
+          <div className="lg:h-screen lg:px-0 px-12">
+            <img className="lg:float-right float-none" src="icebreaker-02.jpg" alt="Ice Breaking" />
+          </div>
+        </div>
+        <div className="flex-initial lg:w-1/2 w-full">
+          <div className="bg-background-primary mt-12">
+            <h2 className="py-4 mx-6">Origin Story</h2>
+          </div>
+          <p className="m-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et erat ante. Praesent ut ex quis quam ornare condimentum. Proin ipsum sem, pretium efficitur sapien et, dapibus posuere lectus. Aliquam ut erat fermentum, sagittis erat ac, aliquam sapien. Suspendisse vestibulum sit amet magna a rhoncus. Fusce rhoncus, nisl sed dignissim porttitor, risus lacus mollis arcu, sed rutrum quam velit eu ante. Vivamus rhoncus ornare massa, at egestas nibh auctor ut. Maecenas non aliquet erat, ac dignissim lectus.</p>
+        </div>
+      </div>
+      <div className="py-12"></div>
+      <div className="flex flex-wrap">
+        <div className="flex-initial lg:w-2/5 w-full">
+          <div className="bg-background-primary mt-12">
+            <h2 className="py-4 mx-6">What is Ice Breaking?</h2>
+          </div>
+          <p className="m-6">Cras commodo mi bibendum, finibus metus at, sollicitudin sem. Fusce ligula justo, laoreet non faucibus elementum, porttitor in lectus. Aenean molestie ac nisi vitae rutrum. Curabitur sit amet consectetur leo. Proin fermentum vitae augue sit amet fermentum. Duis arcu lectus, sagittis sodales quam vel, egestas semper lorem. Proin eget sem consectetur, semper justo a, accumsan arcu. Integer posuere fringilla pretium. Nam id ornare nulla. Praesent eu consequat tellus. Nulla commodo nec eros ut interdum.</p>
+        </div>
+        <div className="flex-initial lg:w-3/5 w-full">
+          <div className="iframe-container">
+            <iframe src="https://www.youtube.com/embed/R5hUMhUFwJU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </div>
         </div>
       </div>
-      <div id="contact" className="flex flex-wrap bg-black text-white py-12">
-        <div className="w-full text-center">
-          <h2 className="font-bold mb-6">Join the Team</h2>
-          <p className="my-6 px-12">Hit us up we will let you know how you can be a part of the team!</p>
+    </div>
+    <div className="py-12"></div>
+    <div id="media">
+      <div className="flex flex-col">
+        <div className="flex flex-wrap">
+          <div className="lg:w-2/3 w-1/2"></div>
+          <div className="lg:w-1/3 w-1/2 bg-background-primary py-4">
+            <h2 className="pl-12 text-left">Photos</h2>
+          </div>
         </div>
-        <div className="md:w-1/2 w-4/5 md:h-screen mx-auto">
-          <img className="md:h-full float-right clear-both" src="icebreaker-01.jpg" alt="teamup" />
+        <div className="flex items-center text-copy-primary my-4">
+          <div className="flex-initial w-4/6 inline-block border-2"></div>
+          <h4 className="flex-initial w-1/6 inline-block text-center">2020</h4>
+          <div className="flex-initial w-1/6 inline-block border-2"></div>
         </div>
-        <div className="md:w-1/2 w-full">
-          <div className="uppercase px-12">
-            <h3>Connect with Us</h3>
+        <div className="lg:w-4/5 w-4/6 mx-auto">
+          <Gallery title='Videos' items={data.photosGalleryJson.gallery} flex_row={'flex-row'} />
+        </div>
+      </div>
+      <div className="py-12"></div>
+      <div className="flex flex-col">
+        <div className="flex flex-wrap">
+          <div className="lg:w-2/3 w-1/2 bg-background-primary py-4">
+            <h2 className="pr-12 text-right">Videos</h2>
+          </div>
+          <div className="lg:w-2/3 w-1/2"></div>
+        </div>
+        <div className="flex items-center text-copy-primary my-4">
+          <div className="flex-initial w-1/6 inline-block border-2"></div>
+          <h4 className="flex-initial w-1/6 inline-block text-center">2020</h4>
+          <div className="flex-initial w-4/6 inline-block border-2"></div>
+        </div>
+        <div className="lg:w-4/5 w-4/6 mx-auto">
+          <Gallery title='Videos' items={data.videosGalleryJson.gallery} flex_row={'flex-row-reverse'} />
+        </div>
+      </div>
+    </div>
+    <div className="py-12"></div>
+    <div id="contact" className="bg-background-primary py-12">
+      <div className="w-full text-center">
+        <h2 className="my-2">Join the Team</h2>
+        <p className="text-lg text-copy-secondary">Hit us up we will let you know how you can be a part of the team!</p>
+      </div>
+      <div className="flex flex-wrap my-6 text-white">
+        <div className="lg:w-3/5 w-full lg:h-screen mx-auto">
+          <img className="float-right clear-both" src="tisg_group_collab.jpg" alt="teamup" />
+        </div>
+        <div className="lg:w-2/5 w-full">
+          <div className="uppercase lg:px-24 px-6 py-6">
+            <h3 className="text-xl">Connect with Us</h3>
             <form>
               <label className="block my-4" htmlFor="name">
                 <h5 className="my-2">Name</h5>
-                <input className="w-full p-1 text-sm" id="name" name="name" type="text" placeholder="John Doe" />
+                <input className="w-full text-sm p-2" id="name" name="name" type="text" placeholder="John Doe" />
               </label>
               <label className="block my-4" htmlFor="subject">
                 <h5 className="my-2">Subject</h5>
-                <input className="w-full p-1 text-sm" id="subject" name="subject" type="text" placeholder="TISG Fan" />
+                <input className="w-full text-sm p-2" id="subject" name="subject" type="text" placeholder="TISG Fan" />
               </label>
               <label className="block my-4" htmlFor="email">
                 <h5 className="my-2">Email</h5>
-                <input className="w-full p-1 text-sm" id="email" name="email" type="email" placeholder="johndoe@example.com" />
+                <input className="w-full text-sm p-2" id="email" name="email" type="email" placeholder="johndoe@example.com" />
               </label>
               <label className="block my-4" htmlFor="message">
                 <h5 className="my-2">Message</h5>
-                <textarea className="w-full p-1 text-sm" id="message" name="message" rows="4" cols="45" placeholder="Place your message here"></textarea>
+                <textarea className="w-full text-sm p-2" id="message" name="message" rows="4" cols="45" placeholder="Place your message here"></textarea>
               </label>
               <input type="submit" name="Submit" className="bg-white text-black p-2 cursor-pointer" />
             </form>

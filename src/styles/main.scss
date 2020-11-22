@@ -1,17 +1,42 @@
-html {
-  div.sass-activated {
-    background-color: rebeccapurple;    
-    padding: 4em;
+:root {
+  //colour palette
+  --bg-background-primary: #172940;
+  --bg-background-secondary: #dceef2;
 
-    h1, li, p {
-      color: white;
-    }
-    a {
-      color: lightblue;
-    }
+  --bg-background-form: #ffffff;
+
+  --text-copy-primary: #A7D5F2;
+  --text-copy-secondary: #5095bf;
+
+  --text-copy-hover: #5095bf;
+  --border-border-color-primary: #A7D5F2;
+
+  h1 {
+    color: #000;
+    font-family: 'calgary-script-ot';
+    font-size: 6rem;
+    text-transform: uppercase;
+  }
+  h2 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
   }
 
-  a {
-    color: blue
+  .iframe-container {
+    overflow: hidden;
+    /* 16:9 aspect ratio */
+    padding-top: 56.25%;
+    position: relative;
+
+    iframe {
+      border: 0;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+   }
   }
 }
