@@ -6,7 +6,7 @@ import { ModalRoutingContext } from 'gatsby-plugin-modal-routing';
 import SocialMedia from '../components/social-media';
 
 const Nav = () => (
-    <ModalRoutingContext.Consumer>
+  <ModalRoutingContext.Consumer>
     {({ modal, closeTo }) => (
       <nav>
           {modal ? (

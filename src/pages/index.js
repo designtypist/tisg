@@ -7,9 +7,10 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import SocialMedia from '../components/social-media';
 import Gallery from '../components/gallery';
-
-const IndexPage = ({ data }) => (
-  <Layout>
+import ContactForm from '../components/contact-form';
+function IndexPage({ data }){
+  return (
+    <Layout>
     <SEO title="Home" />
     <section id="home" className="lg:h-screen">
       <div className="flex flex-wrap">
@@ -23,7 +24,11 @@ const IndexPage = ({ data }) => (
           </div>
         </div>
         <div className="flex-initial lg:w-1/2 w-full">
-          <Img fluid={data.splashphoto.childImageSharp.fluid} />
+          {data.allImageSharp.edges.map((edge) => {
+            if(edge.node.fluid.src.includes('splash-photo.jpg')) {
+              return <Img fluid={edge.node.fluid} />
+            }
+          })}
         </div>
       </div>
     </section>
@@ -31,7 +36,11 @@ const IndexPage = ({ data }) => (
       <div className="flex flex-wrap lg:flex-row flex-col-reverse">
         <div className="flex-initial lg:w-1/2 w-full">
           <div className="lg:h-screen lg:px-0 px-12">
-            <Img fluid={data.photo01.childImageSharp.fluid} />
+            {data.allImageSharp.edges.map((edge) => {
+              if(edge.node.fluid.src.includes('icebreaker-01.jpg')) {
+                return <Img fluid={edge.node.fluid} />
+              }
+            })}
           </div>
         </div>
         <div className="flex-initial lg:w-1/2 w-full">
@@ -99,37 +108,25 @@ const IndexPage = ({ data }) => (
         <p className="text-lg text-copy-secondary">Hit us up we will let you know how you can be a part of the team!</p>
       </div>
       <div className="flex flex-wrap my-6 text-white">
-        <div className="lg:w-3/5 w-full lg:h-screen mx-auto">
-          <Img fluid={data.groupphoto.childImageSharp.fluid} />
+        <div className="lg:w-3/5 w-full mx-auto">
+          {data.allImageSharp.edges.map((edge) => {
+            if(edge.node.fluid.src.includes('group-photo.jpg')) {
+              return <Img fluid={edge.node.fluid} />
+            }
+          })}
         </div>
         <div className="lg:w-2/5 w-full">
-          <div className="uppercase lg:px-12 xl:px-20 px-6 lg:py-0 py-6">
-            <h3 className="text-xl">Connect with Us</h3>
-            <form>
-              <label className="block my-4" htmlFor="name">
-                <h5 className="my-2">Name</h5>
-                <input className="w-full text-sm p-2" id="name" name="name" type="text" placeholder="John Doe" />
-              </label>
-              <label className="block my-4" htmlFor="subject">
-                <h5 className="my-2">Subject</h5>
-                <input className="w-full text-sm p-2" id="subject" name="subject" type="text" placeholder="TISG Fan" />
-              </label>
-              <label className="block my-4" htmlFor="email">
-                <h5 className="my-2">Email</h5>
-                <input className="w-full text-sm p-2" id="email" name="email" type="email" placeholder="johndoe@example.com" />
-              </label>
-              <label className="block my-4" htmlFor="message">
-                <h5 className="my-2">Message</h5>
-                <textarea className="w-full text-sm p-2" id="message" name="message" rows="4" cols="45" placeholder="Place your message here"></textarea>
-              </label>
-              <input type="submit" name="Submit" className="bg-white text-black p-2 cursor-pointer" />
-            </form>
+          <div className="lg:px-12 xl:px-20 px-6 lg:py-0 py-6">
+            <h3 className="text-xl uppercase">Get in Touch</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <ContactForm />
           </div>
         </div>
       </div>
     </section>
   </Layout>
-);
+  )
+}
 
 IndexPage.propTypes = {
   data: PropTypes.object.isRequired,
@@ -139,24 +136,12 @@ export default IndexPage;
 
 export const query = graphql`
   query {
-    splashphoto: file(relativePath: { eq: "photos/splash-photo.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1200) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    },
-    groupphoto: file(relativePath: { eq: "photos/group-photo.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1200) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    },
-    photo01: file(relativePath: { eq: "photos/icebreaker-01.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1200) {
-          ...GatsbyImageSharpFluid
+    allImageSharp {
+      edges {
+        node {
+          fluid(maxHeight: 800, quality: 90) {
+            ...GatsbyImageSharpFluid
+          }
         }
       }
     },

@@ -8,10 +8,10 @@ const Footer = () => (
       <SocialMedia />
     </div>
     <div className="md:w-1/3 w-full text-center">
-      <p>© Copyright {new Date().getFullYear()} TISG</p>
+      <p>© Copyright TISG {new Date().getFullYear()}</p>
     </div>
     <div className="md:w-1/3 w-full md:text-right text-center">
-      <p>Created by <a tw="text-black" href="https://www.designtypist.com" rel="noreferrer" target="_blank">DesignTypist</a></p>
+      <p>Designed and developed by <a className="text-copy-secondary" href="https://www.designtypist.com" rel="noreferrer" target="_blank">DesignTypist</a></p>
     </div>
   </footer>
 );
