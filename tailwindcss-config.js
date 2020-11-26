@@ -1,6 +1,5 @@
 module.exports = {
   purge: false,
-  target: "relaxed",
   theme: {
     colors: {
       transparent: 'transparent',
