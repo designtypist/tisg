@@ -35,10 +35,10 @@ function IndexPage({ data }){
     <section id="about">
       <div className="flex flex-wrap lg:flex-row flex-col-reverse">
         <div className="flex-initial lg:w-1/2 w-full">
-          <div className="lg:h-screen lg:px-0 px-12">
+          <div className="lg:px-0 px-12">
             {data.allImageSharp.edges.map((edge) => {
               if(edge.node.fluid.src.includes('icebreaker-01.jpg')) {
-                return <Img fluid={edge.node.fluid} />
+                return <Img className="h-screen" fluid={edge.node.fluid} />
               }
             })}
           </div>
